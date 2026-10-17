@@ -4,3 +4,16 @@
 *.swp
 *.swo
 *~
+
+# 排除 Rime 部署构建生成的中间件及二进制
+build/
+*.bin
+*.prism.bin
+*.table.bin
+# 排除用户动态词库与数据库
+*.userdb/
+*.userdb.kct/
+# 排除单机状态和机器配置
+user.yaml
+installation.yaml
+sync/
