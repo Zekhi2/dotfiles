@@ -1,0 +1,6 @@
+# 忽略 Vim/Neovim 的撤销与交换文件
+*.un~
+.*.un~
+*.swp
+*.swo
+*~
