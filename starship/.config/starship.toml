@@ -1,0 +1,46 @@
+# 整体提示符布局：两行显示，第一行看信息，第二行打命令，空间更宽裕
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$rust\
+$cmd_duration\
+$line_break\
+$character"""
+
+# ----------------- 目录显示优化 -----------------
+[directory]
+style = "bold cyan"
+truncation_length = 3          # 超过 3 层目录自动智能缩写
+truncate_to_repo = true        # 如果在 git 仓库里，以仓库根目录为基准
+read_only = " 🔒"
+
+# ----------------- Git 分支优化 -----------------
+[git_branch]
+symbol = " "
+style = "bold purple"
+format = "on [$symbol$branch]($style) "
+
+# ----------------- Git 状态可视化 -----------------
+[git_status]
+style = "bold red"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+# 各类状态提示符（修改、未追踪、冲突、暂存）
+modified = "!"
+staged = "+"
+untracked = "?"
+conflicted = "="
+ahead = "⇡${count}"
+behind = "⇣${count}"
+
+# ----------------- 命令行光标样式 -----------------
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+# ----------------- 显示上一条耗时命令的时间 -----------------
+[cmd_duration]
+min_time = 2_000
+format = "took [$duration](bold yellow) "
