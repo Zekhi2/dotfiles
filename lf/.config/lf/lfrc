@@ -1,0 +1,20 @@
+# 基础设定
+set hidden true        # 默认显示隐藏文件
+set preview true       # 开启右侧预览窗格
+set drawbox true       # 绘制漂亮的边框
+set icons true         # 显示文件图标
+
+# 键位习惯
+map gh cd ~            # 输入 gh 回到主目录
+map gd cd ~/Downloads  # 输入 gd 快速进下载目录
+map <delete> delete    # delete 键彻底删除
+
+# 使用系统默认软件打开选中文件（按 l 或 Enter）
+cmd open ${{
+    case $(file --mime-type "$f" -b) in
+        text/*) $EDITOR "$f" ;;
+        *) xdg-open "$f" > /dev/null 2>&1 & ;;
+    esac
+}}
+map <enter> open
+map l open

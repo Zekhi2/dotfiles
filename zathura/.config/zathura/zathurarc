@@ -1,0 +1,5 @@
+set selection-clipboard clipboard " 复制与系统剪贴板互通
+set recolor-keephue true          " 反色时保持图片原本色彩
+set statusbar-home-tilde true     " 状态栏路径缩写
+map r reload                      " 按 r 刷新文档
+map <C-r> recolor                 " 按 Ctrl + r 瞬间切换护眼深色/浅色模式
