@@ -1,0 +1,10 @@
+
+[Default Applications]
+x-scheme-handler/clash=flclash-url-handler.desktop
+x-scheme-handler/clashmeta=flclash-url-handler.desktop
+x-scheme-handler/flclash=flclash-url-handler.desktop
+text/html=microsoft-edge.desktop
+x-scheme-handler/http=microsoft-edge.desktop
+x-scheme-handler/https=microsoft-edge.desktop
+x-scheme-handler/about=microsoft-edge.desktop
+x-scheme-handler/unknown=microsoft-edge.desktop
