@@ -1,1 +1,4 @@
-{}
+{
+    "editor.fontFamily": "consolas, 'source code pro', 'Droid Sans Mono', monospace",
+    "editor.fontSize": 16
+}
