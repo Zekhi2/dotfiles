@@ -17,3 +17,6 @@ build/
 user.yaml
 installation.yaml
 sync/
+
+# 排除备份文件
+*.bak

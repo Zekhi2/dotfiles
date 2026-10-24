@@ -1,4 +1,5 @@
 {
     "editor.fontFamily": "consolas, 'source code pro', 'Droid Sans Mono', monospace",
-    "editor.fontSize": 16
+    "editor.fontSize": 16,
+    "security.workspace.trust.untrustedFiles": "open"
 }

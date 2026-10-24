@@ -1,8 +1,16 @@
 patch:
-  # 1. 设置候选词个数为 9
+  schema_list:
+    - schema: rime_ice
+  
+  # 设置候选词个数为 9
   menu/page_size: 9
 
-  # 2. 设置 [ 向前翻页，] 向后翻页
-  key_binder/bindings/+:
-    - { when: paging, accept: bracketleft, send: Page_Up }
-    - { when: has_menu, accept: bracketright, send: Page_Down }
+  # 设置 - 向前翻页，= 向后翻页
+  # key_binder/bindings/+:
+  #   - { when: paging, accept: minus, send: Page_Up }
+  #   - { when: has_menu, accept: equal, send: Page_Down }
+
+  # 设置 [ 以词定首字，] 以词定尾字
+  # key_binder:
+  #   select_first_character: "bracketleft"
+  #   select_last_character: "bracketright"

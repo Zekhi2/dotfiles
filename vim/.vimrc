@@ -56,7 +56,11 @@ set number          " 显示绝对行号
 set relativenumber  " 显示相对行号（当前行除外）
 set cursorline      " 高亮当前光标所在行
 set showmatch       " 高亮匹配的括号
-set termguicolors   " 开启真彩色支持（需配合支持真彩色的主题使用）
+" 开启真彩色支持+使用主题调色;
+" 不开启+使用终端调色. 避免报错
+if has('termguicolors') 
+    "set termguicolors 
+endif
 
 "======== 搜索行为 ========
 set hlsearch        " 高亮搜索结果
@@ -64,3 +68,5 @@ set incsearch       " 增量搜索
 set ignorecase      " 搜索时忽略大小写
 set smartcase       " 有大写字母时转为大小写敏感
 set wrapscan        " 搜索到文件尾后从头继续
+
+"========= 插件 =========
